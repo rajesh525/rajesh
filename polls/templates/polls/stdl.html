@@ -1,0 +1,9 @@
+{% load staticfiles%}
+<html>
+<body>{% block content%}
+{% for r in slist%}
+<p>{{r.rname}},{{r.rollno}}</p>
+{% endfor %}
+{% endblock %}
+</body>
+</html>

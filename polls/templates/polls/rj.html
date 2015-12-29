@@ -1,0 +1,14 @@
+{% load staticfiles %}
+<html>
+<title>{% block title %}articals for{{ year }} {% endblock %} </title>
+<body>
+{% block content %} 
+
+{% for l in  artl_list %}
+  <p>id: {{l.id}} &nbsp;date:{{ l.pub_date}} &nbsp; headline: {{ l.headline}}  &nbsp;content:{{ l.content}}</p><br>
+  {%  endfor %}
+<a href=>
+</body>
+{% endblock%}
+</body>
+</html>

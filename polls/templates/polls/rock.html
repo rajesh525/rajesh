@@ -1,0 +1,14 @@
+{% load staticfiles%}
+<html>
+<body>
+{% block content%}
+<table border='1'>
+<th>Rollno</th><th>name</th><th>Branch</th>
+ {% for r in pro%}
+<tr><td>{{r.rno}}</td><td>{{r.name}}</td><td>{{r.branch}}</td></tr>
+{% endfor%}
+</table>
+<h1>{{t.name__count}}</h1>
+ {% endblock%}
+</body>
+</html>

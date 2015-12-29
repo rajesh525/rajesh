@@ -1,0 +1,13 @@
+
+{% load staticfiles%}
+<html>
+<body>
+{% block content%}
+<form  method="post" action="{% url 'sub'%}">
+{%csrf_token%}
+<input type="text" name="fname" id="fname"/>
+<input type="submit" name="submit">
+</form>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% load staticfiles%}
+<html>
+<body>
+{% block content%}
+<h2>{{rj}}</h2>
+<form role="form" action="{%url 'nm' %}" method='post'>
+{%csrf_token%}
+<table><tr><td>{{form.yourname.label_tag}}</td><td>{{form.yourname}}{{form.yourname.errors}}</td></tr>
+<tr><td>{{form.subject.label_tag}}</td><td>{{form.subject}}{{form.subject.errors}}</td></tr>
+<tr><td align="center"><input type="submit" name="submit"/>
+</td></tr></form>
+{% endblock%}
+
+</body>
+</html>
